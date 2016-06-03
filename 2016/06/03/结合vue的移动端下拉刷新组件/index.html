@@ -3,17 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>等戴挂</title>
+  <title>结合vue的移动端下拉刷新组件 | 等戴挂</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="等戴挂">
-<meta property="og:url" content="http://jy03078959.github.io/index.html">
+  <meta name="description" content="title: 结合vue的移动端下拉刷新组件
+tags:  在移动端下拉刷新是一个常用的功能，但是找了很多库都不是很好用，并且结合vue使用也不是很友好。只能自己折腾一个。  在做这个插件的时候我想的是下拉刷新这种效果是应该可以自己定义的。当然也可以使用默认的样式。所以插件提供了下拉过程中的几种状态回调方法。可以在该方法里面加入自己的显示内容。具体不多说。看代码。看文档。
+vue-drapload">
+<meta property="og:type" content="article">
+<meta property="og:title" content="结合vue的移动端下拉刷新组件">
+<meta property="og:url" content="http://jy03078959.github.io/2016/06/03/结合vue的移动端下拉刷新组件/index.html">
 <meta property="og:site_name" content="等戴挂">
-<meta property="og:description">
+<meta property="og:description" content="title: 结合vue的移动端下拉刷新组件
+tags:  在移动端下拉刷新是一个常用的功能，但是找了很多库都不是很好用，并且结合vue使用也不是很友好。只能自己折腾一个。  在做这个插件的时候我想的是下拉刷新这种效果是应该可以自己定义的。当然也可以使用默认的样式。所以插件提供了下拉过程中的几种状态回调方法。可以在该方法里面加入自己的显示内容。具体不多说。看代码。看文档。
+vue-drapload">
+<meta property="og:updated_time" content="2016-06-03T08:50:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="等戴挂">
-<meta name="twitter:description">
+<meta name="twitter:title" content="结合vue的移动端下拉刷新组件">
+<meta name="twitter:description" content="title: 结合vue的移动端下拉刷新组件
+tags:  在移动端下拉刷新是一个常用的功能，但是找了很多库都不是很好用，并且结合vue使用也不是很友好。只能自己折腾一个。  在做这个插件的时候我想的是下拉刷新这种效果是应该可以自己定义的。当然也可以使用默认的样式。所以插件提供了下拉过程中的几种状态回调方法。可以在该方法里面加入自己的显示内容。具体不多说。看代码。看文档。
+vue-drapload">
   
     <link rel="alternative" href="/atom.xml" title="等戴挂" type="application/atom+xml">
   
@@ -27,9 +34,6 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-    
-    
-  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -40,8 +44,8 @@
       var yiliaConfig = {
           fancybox: true,
           animate: true,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -182,9 +186,7 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-结合vue的移动端下拉刷新组件" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-结合vue的移动端下拉刷新组件" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/06/03/结合vue的移动端下拉刷新组件/" class="article-date">
@@ -200,12 +202,27 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/03/结合vue的移动端下拉刷新组件/">结合vue的移动端下拉刷新组件</a>
+    <h1 class="article-title" itemprop="name">
+      结合vue的移动端下拉刷新组件
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/vue/">vue</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -278,95 +295,163 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/vue/">vue</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/06/03/结合vue的移动端下拉刷新组件/">结合vue的移动端下拉刷新组件</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 王坤明 的个人博客">王坤明</a></p>
+        <p><span>发布时间:</span>2016年06月03日 - 16时43分</p>
+        <p><span>最后更新:</span>2016年06月03日 - 16时50分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/06/03/结合vue的移动端下拉刷新组件/" title="结合vue的移动端下拉刷新组件">http://jy03078959.github.io/2016/06/03/结合vue的移动端下拉刷新组件/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://jy03078959.github.io/2016/06/03/结合vue的移动端下拉刷新组件/　　作者: 王坤明" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2016/03/01/good/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">博客搬家</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#tags"><span class="toc-number">1.</span> <span class="toc-text">tags:</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vue-drapload"><span class="toc-number"></span> <span class="toc-text">vue-drapload</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装-Install"><span class="toc-number"></span> <span class="toc-text">安装//Install</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#引入默认加载效果的css"><span class="toc-number">0.1.</span> <span class="toc-text">引入默认加载效果的css</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用方法-Usage"><span class="toc-number"></span> <span class="toc-text">使用方法//Usage</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置-Config"><span class="toc-number"></span> <span class="toc-text">配置//Config</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#选项-Options"><span class="toc-number"></span> <span class="toc-text">选项//Options</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#方法-Function"><span class="toc-number"></span> <span class="toc-text">方法//Function</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#License"><span class="toc-number"></span> <span class="toc-text">License</span></a>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
 
 
 
 
 
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 
-  
-    <article id="post-good" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/01/good/" class="article-date">
-      <time datetime="2016-03-01T04:38:00.000Z" itemprop="datePublished">2016-03-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+
     
-      <input type="hidden" class="isFancy" />
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/06/03/结合vue的移动端下拉刷新组件/" data-title="结合vue的移动端下拉刷新组件" data-url="http://jy03078959.github.io/2016/06/03/结合vue的移动端下拉刷新组件/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"stoneship"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
     
-    
-      <header class="article-header">
+
+
+
+    <div class="scroll" id="post-nav-button">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/01/good/">博客搬家</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>博客。一直在尝试去整理自己的东西。但是每次都半途而废。总是拿时间不够或者没啥好总结的当说头，几年下来感觉收货到很多，可留下来的却很少，下定决心就现在开始，好好整理，记录点滴。</p>
-
-      
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2016/03/01/good/" title="下一篇: 博客搬家">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/杂谈/">杂谈</a>
-    </div>
-
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/06/03/结合vue的移动端下拉刷新组件/">结合vue的移动端下拉刷新组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/01/good/">博客搬家</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
 
 
 
-  
-  
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
